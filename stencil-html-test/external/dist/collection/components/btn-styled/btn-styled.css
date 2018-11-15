@@ -1,0 +1,16 @@
+.btn {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  display: inline-block;
+  border-radius: 1.5rem;
+  background-color: #55c57a;
+  color: white;
+  transition: all .2s;
+  cursor: pointer; }
+  .btn:hover {
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.3rem);
+    background-color: #28b485; }
+  .btn:active {
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.1rem); }

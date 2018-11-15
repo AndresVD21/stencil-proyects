@@ -1,0 +1,14 @@
+progress-bar {
+    display: block;
+    height: 20px;
+    // width: 100%;
+    border: 1px solid $color-grey-dark;
+    background-color: white;
+    padding: 2px;
+  
+    div{
+       background-color: $color-primary-light;
+       height: 100%;
+       transition: width .3s;
+    }
+  }

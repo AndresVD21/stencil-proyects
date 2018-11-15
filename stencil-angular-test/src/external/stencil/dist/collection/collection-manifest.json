@@ -1,0 +1,114 @@
+{
+  "components": [
+    {
+      "tag": "btn-styled",
+      "dependencies": [],
+      "componentClass": "BtnStyled",
+      "componentPath": "components/btn-styled/btn-styled.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/btn-styled/btn-styled.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "label",
+          "type": "String",
+          "attr": "label"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "progress-bar",
+      "dependencies": [],
+      "componentClass": "ProgressBar",
+      "componentPath": "components/progress-bar/progress-bar.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/progress-bar/progress-bar.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "progress",
+          "type": "Number",
+          "attr": "progress",
+          "watch": [
+            "didChangeHandler"
+          ]
+        }
+      ],
+      "hostElement": {
+        "name": "bar"
+      },
+      "events": [
+        {
+          "event": "progressDone"
+        }
+      ]
+    },
+    {
+      "tag": "slider-input",
+      "dependencies": [],
+      "componentClass": "Slider",
+      "componentPath": "components/slider/slider.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/slider/slider.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "max",
+          "type": "Number",
+          "attr": "max"
+        },
+        {
+          "name": "min",
+          "type": "Number",
+          "attr": "min"
+        },
+        {
+          "name": "value",
+          "type": "Number",
+          "attr": "value"
+        }
+      ],
+      "events": [
+        {
+          "event": "valueChanged"
+        }
+      ]
+    }
+  ],
+  "collections": [],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.15.1",
+    "typescriptVersion": "2.9.2"
+  },
+  "bundles": [
+    {
+      "components": [
+        "progress-bar"
+      ]
+    },
+    {
+      "components": [
+        "btn-styled"
+      ]
+    },
+    {
+      "components": [
+        "slider-input"
+      ]
+    }
+  ]
+}

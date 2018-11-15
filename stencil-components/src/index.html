@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="/build/mycomponent.css">
+  
+</head>
+<body>
+  
+  <progress-bar progress="50"></progress-bar>
+  <br>
+  <slider-input min="0" max="100" value="25"></slider-input>
+  <br>
+  <btn-styled id="up" label="UPGRADE PROGRESS"></btn-styled>
+  <btn-styled id="down" label="DOWNGRADE PROGRESS"></btn-styled>
+
+  <script>
+    let progressBar = document.querySelector('progress-bar');
+    let slider = document.querySelector('slider-input');
+    let button = document.querySelector('btn-styled');
+    let buttonDown = document.getElementById('down');
+
+    button.addEventListener("click", () => {
+      let actProgress = +progressBar.getAttribute("progress");
+      progressBar.setAttribute("progress", actProgress+10);
+    })
+
+    buttonDown.addEventListener("click", () => {
+      let actProgress = +progressBar.getAttribute("progress");
+      progressBar.setAttribute("progress",actProgress-10);
+    })
+  
+    progressBar.addEventListener("progressDone", ()=>{console.log("progress done!!");});
+    slider.addEventListener("valueChanged",(event)=>{
+      console.log(event.detail);
+      progressBar.setAttribute("progress", event.detail);
+    });
+  </script>
+  
+  <script src="/build/mycomponent.js"></script>
+</body>
+</html>
